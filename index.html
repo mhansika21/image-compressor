@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Free Image Compressor Online - Reduce JPG, PNG and WebP Size</title>
+    <meta
+      name="description"
+      content="Compress images online for free. Reduce JPG, PNG, and WebP file size in your browser without uploading images to a server."
+    >
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#2563eb">
+    <link rel="canonical" href="https://example.com/">
+    <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Free Image Compressor Online",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Any",
+        "description": "A free browser-based image compressor for JPG, PNG, and WebP images.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero" aria-labelledby="page-title">
+        <div class="intro">
+          <p class="eyebrow">Free online tool</p>
+          <h1 id="page-title">Image Compressor</h1>
+          <p>
+            Reduce image file size for websites, forms, email, and social media.
+            Your image is compressed in this browser, so it does not need to be
+            uploaded to any server.
+          </p>
+        </div>
+
+        <section class="tool" aria-label="Image compressor tool">
+          <label class="drop-zone" id="dropZone" for="imageInput">
+            <input id="imageInput" type="file" accept="image/jpeg,image/png,image/webp">
+            <span class="drop-icon" aria-hidden="true">IMG</span>
+            <strong>Choose image or drop it here</strong>
+            <small>JPG, PNG, or WebP</small>
+          </label>
+
+          <div class="controls">
+            <label>
+              Maximum size
+              <div class="size-row">
+                <input id="targetSizeInput" type="number" min="0.01" step="0.01" value="200">
+                <select id="targetUnitInput">
+                  <option value="KB">KB</option>
+                  <option value="MB">MB</option>
+                </select>
+              </div>
+            </label>
+
+            <label>
+              Max width
+              <input id="widthInput" type="number" min="100" max="6000" step="100" value="1600">
+            </label>
+
+            <label>
+              Output format
+              <select id="formatInput">
+                <option value="image/jpeg">JPG</option>
+                <option value="image/webp">WebP</option>
+                <option value="image/png">PNG</option>
+              </select>
+            </label>
+
+            <button type="button" id="compressButton">Compress Image</button>
+          </div>
+        </section>
+      </section>
+
+      <section class="results" aria-label="Compression results">
+        <article class="preview-panel">
+          <div class="panel-top">
+            <h2>Original</h2>
+            <span id="originalSize">No image</span>
+          </div>
+          <div class="image-frame">
+            <img id="originalPreview" alt="">
+            <p id="originalPlaceholder">Your selected image will appear here.</p>
+          </div>
+        </article>
+
+        <article class="preview-panel">
+          <div class="panel-top">
+            <h2>Compressed</h2>
+            <span id="compressedSize">Waiting</span>
+          </div>
+          <div class="image-frame">
+            <img id="compressedPreview" alt="">
+            <p id="compressedPlaceholder">Compress an image to see the result.</p>
+          </div>
+          <div class="saving" id="savingText">Savings will show here.</div>
+          <a class="download disabled" id="downloadLink" href="#" download>Download compressed image</a>
+        </article>
+      </section>
+
+      <section class="content" aria-label="About image compression">
+        <h2>Compress Images for Free</h2>
+        <p>
+          This image compressor can reduce photo size by lowering quality,
+          resizing large images, and converting to JPG or WebP. Smaller images
+          load faster on websites and are easier to upload or share.
+        </p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
